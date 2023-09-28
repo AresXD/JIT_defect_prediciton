@@ -1,3 +1,3 @@
 # A-study-on-the-impact-of-pre-trained-model-on-Just-In-Time-defect-prediction
-Code
+
 Added model code， detailed descriptions and data sets will be released later...
