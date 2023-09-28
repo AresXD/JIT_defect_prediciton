@@ -1,0 +1,510 @@
+(network) root@f568504f151e:/data/py_project_500/Lora# python run.py -test -original
+test roberta model====================
+test roberta-base model
+CUDA_VISIBLE_DEVICES=0 python RoBERTa.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model roberta_snapshot/original/qt/epoch_1_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+predicting lora-codebert model
+5141 5141
+ max length at tokenizer: 256
+ max length for code tokenizer: 128
+5141 5141 5141
+Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.decoder.weight', 'lm_head.layer_norm.bias']
+
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [02:39<00:00, 2.02it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.76 Accuracy: 0.72, False Positives: 0.84, Precision: 0.16, Recall: 0.70
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.73 Accuracy: 0.87, False Positives: 0.77, Precision: 0.23, Recall: 0.35
+  程序运行时间：167.6385 s
+  CUDA_VISIBLE_DEVICES=0 python RoBERTa.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model roberta_snapshot/original/qt/epoch_2_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  predicting lora-codebert model
+  5141 5141
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  5141 5141 5141
+  Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.decoder.weight', 'lm_head.dense.weight', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [02:39<00:00, 2.02it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.73 Accuracy: 0.91, False Positives: 0.81, Precision: 0.19, Recall: 0.08
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.91, False Positives: 0.69, Precision: 0.31, Recall: 0.16
+  程序运行时间：167.4955 s
+  CUDA_VISIBLE_DEVICES=0 python RoBERTa.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model roberta_snapshot/original/qt/epoch_3_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  predicting lora-codebert model
+  5141 5141
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  5141 5141 5141
+  Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.decoder.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [02:39<00:00, 2.03it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.65 Accuracy: 0.70, False Positives: 0.86, Precision: 0.14, Recall: 0.57
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.86, False Positives: 0.77, Precision: 0.23, Recall: 0.37
+  程序运行时间：167.3494 s
+  CUDA_VISIBLE_DEVICES=0 python RoBERTa.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model roberta_snapshot/original/openstack/epoch_1_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  predicting lora-codebert model
+  2661 2661
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  2661 2661 2661
+  Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.decoder.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:23<00:00, 2.01it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.72, False Positives: 0.76, Precision: 0.24, Recall: 0.59
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.77, False Positives: 0.73, Precision: 0.27, Recall: 0.53
+  程序运行时间：87.22395 s
+  CUDA_VISIBLE_DEVICES=0 python RoBERTa.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model roberta_snapshot/original/openstack/epoch_2_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  predicting lora-codebert model
+  2661 2661
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  2661 2661 2661
+  Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.decoder.weight', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:23<00:00, 2.01it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.68 Accuracy: 0.62, False Positives: 0.80, Precision: 0.20, Recall: 0.68
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.72 Accuracy: 0.77, False Positives: 0.75, Precision: 0.25, Recall: 0.42
+  程序运行时间：87.31619 s
+  CUDA_VISIBLE_DEVICES=0 python RoBERTa.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model roberta_snapshot/original/openstack/epoch_3_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  predicting lora-codebert model
+  2661 2661
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  2661 2661 2661
+  Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.decoder.weight', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:23<00:00, 2.01it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.62 Accuracy: 0.66, False Positives: 0.81, Precision: 0.19, Recall: 0.56
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.74 Accuracy: 0.83, False Positives: 0.70, Precision: 0.30, Recall: 0.27
+  程序运行时间：86.90217 s
+====================================================================================================
+(network) root@f568504f151e:/data/py_project_500/Lora# python run.py -test -original
+test codebert model====================
+test plbart-base model
+CUDA_VISIBLE_DEVICES=0 python CodeBERT.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model codebert_snapshot/original/qt/epoch_1_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+5141 5141
+ max length at tokenizer: 256
+ max length for code tokenizer: 128
+5141 5141 5141
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [02:39<00:00,  2.02it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.76 Accuracy: 0.66, False Positives: 0.86, Precision: 0.14, Recall: 0.76
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.76 Accuracy: 0.85, False Positives: 0.80, Precision: 0.20, Recall: 0.37
+程序运行时间：177.4285 s
+CUDA_VISIBLE_DEVICES=0 python CodeBERT.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model codebert_snapshot/original/qt/epoch_2_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+5141 5141
+ max length at tokenizer: 256
+ max length for code tokenizer: 128
+5141 5141 5141
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [02:39<00:00,  2.02it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.71 Accuracy: 0.90, False Positives: 0.78, Precision: 0.22, Recall: 0.15
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.74 Accuracy: 0.89, False Positives: 0.78, Precision: 0.22, Recall: 0.23
+程序运行时间：167.3662 s
+CUDA_VISIBLE_DEVICES=0 python CodeBERT.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model codebert_snapshot/original/qt/epoch_3_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+5141 5141
+ max length at tokenizer: 256
+ max length for code tokenizer: 128
+5141 5141 5141
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [02:39<00:00,  2.02it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.68 Accuracy: 0.90, False Positives: 0.80, Precision: 0.20, Recall: 0.11
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.72 Accuracy: 0.88, False Positives: 0.80, Precision: 0.20, Recall: 0.22
+程序运行时间：167.7400 s
+
+CUDA_VISIBLE_DEVICES=0 python CodeBERT.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model codebert_snapshot/original/openstack/epoch_1_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+2661 2661
+ max length at tokenizer: 256
+ max length for code tokenizer: 128
+2661 2661 2661
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:22<00:00,  2.02it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.78 Accuracy: 0.64, False Positives: 0.77, Precision: 0.23, Recall: 0.82
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.78 Accuracy: 0.79, False Positives: 0.70, Precision: 0.30, Recall: 0.55
+程序运行时间：87.07215 s
+CUDA_VISIBLE_DEVICES=0 python CodeBERT.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model codebert_snapshot/original/openstack/epoch_2_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+2661 2661
+ max length at tokenizer: 256
+ max length for code tokenizer: 128
+2661 2661 2661
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:22<00:00,  2.01it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.79, False Positives: 0.72, Precision: 0.28, Recall: 0.46
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.79, False Positives: 0.73, Precision: 0.27, Recall: 0.44
+程序运行时间：96.82702 s
+CUDA_VISIBLE_DEVICES=0 python CodeBERT.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model codebert_snapshot/original/openstack/epoch_3_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+2661 2661
+ max length at tokenizer: 256
+ max length for code tokenizer: 128
+2661 2661 2661
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:22<00:00,  2.01it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.76, False Positives: 0.73, Precision: 0.27, Recall: 0.56
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.69 Accuracy: 0.81, False Positives: 0.73, Precision: 0.27, Recall: 0.32
+程序运行时间：87.12673 s
+====================================================================================================
+- test gpt2 model====================
+  test plbart-base model
+  CUDA_VISIBLE_DEVICES=0 python GPT2.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model gpt2_snapshot/original/qt/epoch_1_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  5141 5141
+  max length at tokenizer: 256
+  max length for code tokenizer: 120
+  5141 5141 5141
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:03<00:00, 1.75it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.76 Accuracy: 0.15, False Positives: 0.92, Precision: 0.08, Recall: 0.99
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.78, False Positives: 0.82, Precision: 0.18, Recall: 0.56
+  程序运行时间：196.8155 s
+  CUDA_VISIBLE_DEVICES=0 python GPT2.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model gpt2_snapshot/original/qt/epoch_2_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  5141 5141
+  max length at tokenizer: 256
+  max length for code tokenizer: 120
+  5141 5141 5141
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:03<00:00, 1.75it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.73 Accuracy: 0.12, False Positives: 0.92, Precision: 0.08, Recall: 0.98
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.72 Accuracy: 0.79, False Positives: 0.83, Precision: 0.17, Recall: 0.50
+  程序运行时间：192.4941 s
+  CUDA_VISIBLE_DEVICES=0 python GPT2.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model gpt2_snapshot/original/qt/epoch_3_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  5141 5141
+  max length at tokenizer: 256
+  max length for code tokenizer: 120
+  5141 5141 5141
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:04<00:00, 1.75it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.72 Accuracy: 0.18, False Positives: 0.92, Precision: 0.08, Recall: 0.97
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.71 Accuracy: 0.87, False Positives: 0.76, Precision: 0.24, Recall: 0.37
+  程序运行时间：192.0447 s
+  CUDA_VISIBLE_DEVICES=0 python GPT2.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model gpt2_snapshot/original/openstack/epoch_1_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  2661 2661
+  max length at tokenizer: 256
+  max length for code tokenizer: 120
+  2661 2661 2661
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:35<00:00, 1.74it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.67, False Positives: 0.77, Precision: 0.23, Recall: 0.70
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.73 Accuracy: 0.73, False Positives: 0.76, Precision: 0.24, Recall: 0.55
+  程序运行时间：103.0282 s
+  CUDA_VISIBLE_DEVICES=0 python GPT2.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model gpt2_snapshot/original/openstack/epoch_2_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  2661 2661
+  max length at tokenizer: 256
+  max length for code tokenizer: 120
+  2661 2661 2661
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:35<00:00, 1.75it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.73 Accuracy: 0.83, False Positives: 0.71, Precision: 0.29, Recall: 0.28
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.73 Accuracy: 0.83, False Positives: 0.70, Precision: 0.30, Recall: 0.27
+  程序运行时间：99.16073 s
+  CUDA_VISIBLE_DEVICES=0 python GPT2.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model gpt2_snapshot/original/openstack/epoch_3_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  2661 2661
+  max length at tokenizer: 256
+  max length for code tokenizer: 120
+  2661 2661 2661
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:35<00:00, 1.75it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.69 Accuracy: 0.86, False Positives: 0.66, Precision: 0.34, Recall: 0.12
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.71 Accuracy: 0.86, False Positives: 0.67, Precision: 0.33, Recall: 0.10
+  程序运行时间：99.12753 s
+  test codegpt model====================
+  test plbart-base model
+  CUDA_VISIBLE_DEVICES=0 python CodeGPT.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model codegpt_snapshot/original/qt/epoch_1_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  5141 5141
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length at tokenizer: 256
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length for code tokenizer: 120
+  5141 5141 5141
+  Some weights of the model checkpoint at microsoft/CodeGPT-small-java were not used when initializing GPT2Model: ['lm_head.weight']
+- This IS expected if you are initializing GPT2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing GPT2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:04<00:00, 1.75it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.70, False Positives: 0.84, Precision: 0.16, Recall: 0.72
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.71 Accuracy: 0.84, False Positives: 0.82, Precision: 0.18, Recall: 0.35
+  程序运行时间：206.0353 s
+  CUDA_VISIBLE_DEVICES=0 python CodeGPT.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model codegpt_snapshot/original/qt/epoch_2_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  5141 5141
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length at tokenizer: 256
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length for code tokenizer: 120
+  5141 5141 5141
+  Some weights of the model checkpoint at microsoft/CodeGPT-small-java were not used when initializing GPT2Model: ['lm_head.weight']
+- This IS expected if you are initializing GPT2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing GPT2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:04<00:00, 1.75it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.76 Accuracy: 0.73, False Positives: 0.83, Precision: 0.17, Recall: 0.68
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.71 Accuracy: 0.89, False Positives: 0.78, Precision: 0.22, Recall: 0.21
+  程序运行时间：192.7880 s
+  CUDA_VISIBLE_DEVICES=0 python CodeGPT.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model codegpt_snapshot/original/qt/epoch_3_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  5141 5141
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length at tokenizer: 256
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length for code tokenizer: 120
+  5141 5141 5141
+  Some weights of the model checkpoint at microsoft/CodeGPT-small-java were not used when initializing GPT2Model: ['lm_head.weight']
+- This IS expected if you are initializing GPT2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing GPT2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:04<00:00, 1.75it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.74, False Positives: 0.84, Precision: 0.16, Recall: 0.61
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.70 Accuracy: 0.89, False Positives: 0.79, Precision: 0.21, Recall: 0.17
+  程序运行时间：192.5754 s
+  CUDA_VISIBLE_DEVICES=0 python CodeGPT.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model codegpt_snapshot/original/openstack/epoch_1_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  2661 2661
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length at tokenizer: 256
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length for code tokenizer: 120
+  2661 2661 2661
+  Some weights of the model checkpoint at microsoft/CodeGPT-small-java were not used when initializing GPT2Model: ['lm_head.weight']
+- This IS expected if you are initializing GPT2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing GPT2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:35<00:00, 1.74it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.68, False Positives: 0.75, Precision: 0.25, Recall: 0.77
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.74 Accuracy: 0.69, False Positives: 0.76, Precision: 0.24, Recall: 0.69
+  程序运行时间：103.6181 s
+  CUDA_VISIBLE_DEVICES=0 python CodeGPT.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model codegpt_snapshot/original/openstack/epoch_2_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  2661 2661
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length at tokenizer: 256
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length for code tokenizer: 120
+  2661 2661 2661
+  Some weights of the model checkpoint at microsoft/CodeGPT-small-java were not used when initializing GPT2Model: ['lm_head.weight']
+- This IS expected if you are initializing GPT2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing GPT2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:36<00:00, 1.74it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.62, False Positives: 0.78, Precision: 0.22, Recall: 0.83
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.72 Accuracy: 0.82, False Positives: 0.73, Precision: 0.27, Recall: 0.27
+  程序运行时间：100.1863 s
+  CUDA_VISIBLE_DEVICES=0 python CodeGPT.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model codegpt_snapshot/original/openstack/epoch_3_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  2661 2661
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length at tokenizer: 256
+  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+  max length for code tokenizer: 120
+  2661 2661 2661
+  Some weights of the model checkpoint at microsoft/CodeGPT-small-java were not used when initializing GPT2Model: ['lm_head.weight']
+- This IS expected if you are initializing GPT2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing GPT2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:36<00:00, 1.73it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.67, False Positives: 0.76, Precision: 0.24, Recall: 0.78
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.69 Accuracy: 0.83, False Positives: 0.74, Precision: 0.26, Recall: 0.23
+  程序运行时间：100.7134 s
+=========================
+
+(network) root@f568504f151e:/data/py_project_500/Lora# python run.py -test -original
+test bart-base model====================
+test bart-base model
+CUDA_VISIBLE_DEVICES=0 python plbart.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model bart_snapshot/original/qt/epoch_1_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+predicting lora-codebert model
+5141 5141
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+5141 5141 5141
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.bias', 'classification_head.dense.weight', 'classification_head.out_proj.weight', 'classification_head.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:13<00:00,  1.67it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.78 Accuracy: 0.61, False Positives: 0.86, Precision: 0.14, Recall: 0.82
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.74 Accuracy: 0.74, False Positives: 0.83, Precision: 0.17, Recall: 0.63
+程序运行时间：201.7966 s
+CUDA_VISIBLE_DEVICES=0 python plbart.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model bart_snapshot/original/qt/epoch_2_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+predicting lora-codebert model
+5141 5141
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+5141 5141 5141
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.dense.weight', 'classification_head.dense.bias', 'classification_head.out_proj.bias', 'classification_head.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:12<00:00,  1.67it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.46, False Positives: 0.89, Precision: 0.11, Recall: 0.90
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.68 Accuracy: 0.88, False Positives: 0.78, Precision: 0.22, Recall: 0.27
+程序运行时间：201.6518 s
+
+CUDA_VISIBLE_DEVICES=0 python plbart.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model bart_snapshot/original/qt/epoch_3_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+predicting lora-codebert model
+5141 5141
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+5141 5141 5141
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.weight', 'classification_head.out_proj.bias', 'classification_head.dense.weight', 'classification_head.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:12<00:00,  1.67it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.76 Accuracy: 0.59, False Positives: 0.87, Precision: 0.13, Recall: 0.84
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.67 Accuracy: 0.89, False Positives: 0.77, Precision: 0.23, Recall: 0.21
+程序运行时间：201.8854 s
+CUDA_VISIBLE_DEVICES=0 python plbart.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model bart_snapshot/original/openstack/epoch_1_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+predicting lora-codebert model
+2661 2661
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+2661 2661 2661
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.dense.weight', 'classification_head.out_proj.bias', 'classification_head.out_proj.weight', 'classification_head.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:40<00:00,  1.67it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.50, False Positives: 0.81, Precision: 0.19, Recall: 0.95
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.78 Accuracy: 0.67, False Positives: 0.76, Precision: 0.24, Recall: 0.77
+程序运行时间：105.1229 s
+CUDA_VISIBLE_DEVICES=0 python plbart.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model bart_snapshot/original/openstack/epoch_2_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+predicting lora-codebert model
+2661 2661
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+2661 2661 2661
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.bias', 'classification_head.dense.weight', 'classification_head.dense.bias', 'classification_head.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:40<00:00,  1.67it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.78 Accuracy: 0.41, False Positives: 0.83, Precision: 0.17, Recall: 0.98
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.78, False Positives: 0.72, Precision: 0.28, Recall: 0.49
+
+CUDA_VISIBLE_DEVICES=0 python plbart.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model bart_snapshot/original/openstack/epoch_3_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+predicting lora-codebert model
+2661 2661
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+2661 2661 2661
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.bias', 'classification_head.dense.weight', 'classification_head.dense.bias', 'classification_head.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:40<00:00,  1.67it/s]
+Test data -- only left code predict:
+Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.43, False Positives: 0.83, Precision: 0.17, Recall: 0.94
+Test data -- only left msg predict:
+Test data at Threshold 0.5 -- AUc: 0.68 Accuracy: 0.82, False Positives: 0.69, Precision: 0.31, Recall: 0.35
+程序运行时间：104.5700 s
+
+
+- test plbart-base model====================
+  test plbart-base model
+  CUDA_VISIBLE_DEVICES=0 python bart.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model plbart_snapshot/original/qt/epoch_1_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  5141 5141
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  5141 5141 5141
+  Some weights of the model checkpoint at plbart were not used when initializing PLBartModel: ['lm_head.weight', 'final_logits_bias']
+- This IS expected if you are initializing PLBartModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing PLBartModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:18<00:00, 1.62it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.64, False Positives: 0.86, Precision: 0.14, Recall: 0.77
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.86, False Positives: 0.77, Precision: 0.23, Recall: 0.43
+  程序运行时间：207.2489 s
+  CUDA_VISIBLE_DEVICES=0 python bart.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model plbart_snapshot/original/qt/epoch_2_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  5141 5141
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  5141 5141 5141
+  Some weights of the model checkpoint at plbart were not used when initializing PLBartModel: ['final_logits_bias', 'lm_head.weight']
+- This IS expected if you are initializing PLBartModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing PLBartModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:19<00:00, 1.62it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.74 Accuracy: 0.30, False Positives: 0.91, Precision: 0.09, Recall: 0.92
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.76 Accuracy: 0.87, False Positives: 0.79, Precision: 0.21, Recall: 0.29
+  程序运行时间：208.4441 s
+  CUDA_VISIBLE_DEVICES=0 python bart.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model plbart_snapshot/original/qt/epoch_3_step_1286.pt -dictionary_data ../data/qt_dict.pkl -weight
+  5141 5141
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  5141 5141 5141
+  Some weights of the model checkpoint at plbart were not used when initializing PLBartModel: ['final_logits_bias', 'lm_head.weight']
+- This IS expected if you are initializing PLBartModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing PLBartModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [03:19<00:00, 1.62it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.71 Accuracy: 0.28, False Positives: 0.92, Precision: 0.08, Recall: 0.91
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.86, False Positives: 0.79, Precision: 0.21, Recall: 0.32
+  程序运行时间：208.6636 s
+  CUDA_VISIBLE_DEVICES=0 python bart.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model plbart_snapshot/original/openstack/epoch_1_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  2661 2661
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  2661 2661 2661
+  Some weights of the model checkpoint at plbart were not used when initializing PLBartModel: ['final_logits_bias', 'lm_head.weight']
+- This IS expected if you are initializing PLBartModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing PLBartModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:43<00:00, 1.61it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.76 Accuracy: 0.67, False Positives: 0.77, Precision: 0.23, Recall: 0.71
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.78 Accuracy: 0.73, False Positives: 0.74, Precision: 0.26, Recall: 0.65
+  程序运行时间：110.8450 s
+  CUDA_VISIBLE_DEVICES=0 python bart.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model plbart_snapshot/original/openstack/epoch_2_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  2661 2661
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  2661 2661 2661
+  Some weights of the model checkpoint at plbart were not used when initializing PLBartModel: ['lm_head.weight', 'final_logits_bias']
+- This IS expected if you are initializing PLBartModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing PLBartModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:43<00:00, 1.61it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.74 Accuracy: 0.83, False Positives: 0.67, Precision: 0.33, Recall: 0.35
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.77 Accuracy: 0.83, False Positives: 0.66, Precision: 0.34, Recall: 0.39
+  程序运行时间：108.4696 s
+  CUDA_VISIBLE_DEVICES=0 python bart.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model plbart_snapshot/original/openstack/epoch_3_step_666.pt -dictionary_data ../data/openstack_dict.pkl -weight
+  2661 2661
+  max length at tokenizer: 256
+  max length for code tokenizer: 128
+  2661 2661 2661
+  Some weights of the model checkpoint at plbart were not used when initializing PLBartModel: ['lm_head.weight', 'final_logits_bias']
+- This IS expected if you are initializing PLBartModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing PLBartModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [01:43<00:00, 1.61it/s]
+  Test data -- only left code predict:
+  Test data at Threshold 0.5 -- AUc: 0.72 Accuracy: 0.88, False Positives: 0.31, Precision: 0.69, Recall: 0.03
+  Test data -- only left msg predict:
+  Test data at Threshold 0.5 -- AUc: 0.76 Accuracy: 0.84, False Positives: 0.68, Precision: 0.32, Recall: 0.25
+  程序运行时间：109.1202 s

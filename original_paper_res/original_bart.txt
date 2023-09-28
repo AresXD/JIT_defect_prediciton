@@ -1,0 +1,160 @@
+(network) root@f568504f151e:/data/py_project_500/Lora# python run.py -bart_model -train -original
+torch.Size([1, 768])
+train bart-base model
+CUDA_VISIBLE_DEVICES=2 python plbart.py -train -train_data ../data/qt_data/qt_train.pkl -save-dir bart_snapshot/original/qt -dictionary_data ../data/qt_dict.pkl
+20563 20563
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+20563 20563 20563
+pad_msg_input_ids (20563, 256)
+pad_msg_input_masks (20563, 256)
+pad_code_input_ids (20563, 4, 120)
+pad_code_input_masks (20563, 4, 120)
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.bias', 'classification_head.out_proj.weight', 'classification_head.dense.bias', 'classification_head.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  8%|█████████████████▋                                                                                                                                                                                                                   | 99/1286 [00:38<07:11,  2.75it/s]Epoch 1 / 3  the step 100-- Total loss: 66.822174
+ 15%|███████████████████████████████████▎                                                                                                                                                                                                | 199/1286 [01:14<06:43,  2.69it/s]Epoch 1 / 3  the step 200-- Total loss: 61.972702
+ 23%|█████████████████████████████████████████████████████                                                                                                                                                                               | 299/1286 [01:51<06:08,  2.68it/s]Epoch 1 / 3  the step 300-- Total loss: 55.782585
+ 31%|██████████████████████████████████████████████████████████████████████▋                                                                                                                                                             | 399/1286 [02:30<05:42,  2.59it/s]Epoch 1 / 3  the step 400-- Total loss: 55.296535
+ 39%|████████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                                           | 499/1286 [03:08<04:55,  2.66it/s]Epoch 1 / 3  the step 500-- Total loss: 54.505817
+ 47%|██████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                                                         | 599/1286 [03:46<04:17,  2.66it/s]Epoch 1 / 3  the step 600-- Total loss: 51.730824
+ 54%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                        | 699/1286 [04:24<03:41,  2.65it/s]Epoch 1 / 3  the step 700-- Total loss: 45.597084
+ 62%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                      | 799/1286 [05:01<03:03,  2.65it/s]Epoch 1 / 3  the step 800-- Total loss: 47.190140
+ 70%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                    | 899/1286 [05:39<02:26,  2.64it/s]Epoch 1 / 3  the step 900-- Total loss: 45.002460
+ 78%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                   | 999/1286 [06:17<01:48,  2.65it/s]Epoch 1 / 3  the step 1000-- Total loss: 44.316177
+ 85%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                 | 1099/1286 [06:55<01:10,  2.64it/s]Epoch 1 / 3  the step 1100-- Total loss: 41.498589
+ 93%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋               | 1199/1286 [07:33<00:32,  2.67it/s]Epoch 1 / 3  the step 1200-- Total loss: 35.707104
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1286/1286 [08:07<00:00,  2.64it/s]
+path: bart_snapshot/original/qt/epoch_1_step_1286.pt
+  8%|█████████████████▋                                                                                                                                                                                                                   | 99/1286 [00:36<07:22,  2.69it/s]Epoch 2 / 3  the step 100-- Total loss: 30.674763
+ 15%|███████████████████████████████████▎                                                                                                                                                                                                | 199/1286 [01:14<06:48,  2.66it/s]Epoch 2 / 3  the step 200-- Total loss: 29.308235
+ 23%|█████████████████████████████████████████████████████                                                                                                                                                                               | 299/1286 [01:51<06:09,  2.67it/s]Epoch 2 / 3  the step 300-- Total loss: 26.978199
+ 31%|██████████████████████████████████████████████████████████████████████▋                                                                                                                                                             | 399/1286 [02:29<05:35,  2.64it/s]Epoch 2 / 3  the step 400-- Total loss: 25.195345
+ 39%|████████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                                           | 499/1286 [03:07<04:56,  2.66it/s]Epoch 2 / 3  the step 500-- Total loss: 25.869787
+ 47%|██████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                                                         | 599/1286 [03:45<04:18,  2.66it/s]Epoch 2 / 3  the step 600-- Total loss: 21.586594
+ 54%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                        | 699/1286 [04:23<03:41,  2.65it/s]Epoch 2 / 3  the step 700-- Total loss: 20.718254
+ 62%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                      | 799/1286 [05:01<03:03,  2.65it/s]Epoch 2 / 3  the step 800-- Total loss: 16.263136
+ 70%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                    | 899/1286 [05:39<02:25,  2.66it/s]Epoch 2 / 3  the step 900-- Total loss: 14.732495
+ 78%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                   | 999/1286 [06:17<01:48,  2.65it/s]Epoch 2 / 3  the step 1000-- Total loss: 14.862995
+ 85%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                 | 1099/1286 [06:55<01:11,  2.62it/s]Epoch 2 / 3  the step 1100-- Total loss: 13.597212
+ 93%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋               | 1199/1286 [07:33<00:32,  2.66it/s]Epoch 2 / 3  the step 1200-- Total loss: 12.705349
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1286/1286 [08:06<00:00,  2.64it/s]
+path: bart_snapshot/original/qt/epoch_2_step_1286.pt
+  8%|█████████████████▋                                                                                                                                                                                                                   | 99/1286 [00:36<07:25,  2.66it/s]Epoch 3 / 3  the step 100-- Total loss: 11.066616
+ 15%|███████████████████████████████████▎                                                                                                                                                                                                | 199/1286 [01:14<06:50,  2.65it/s]Epoch 3 / 3  the step 200-- Total loss: 8.658845
+ 23%|█████████████████████████████████████████████████████                                                                                                                                                                               | 299/1286 [01:52<06:11,  2.66it/s]Epoch 3 / 3  the step 300-- Total loss: 8.222505
+ 31%|██████████████████████████████████████████████████████████████████████▋                                                                                                                                                             | 399/1286 [02:30<05:36,  2.64it/s]Epoch 3 / 3  the step 400-- Total loss: 9.002036
+ 39%|████████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                                           | 499/1286 [03:08<05:00,  2.62it/s]Epoch 3 / 3  the step 500-- Total loss: 7.452548
+ 47%|██████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                                                         | 599/1286 [03:46<04:18,  2.65it/s]Epoch 3 / 3  the step 600-- Total loss: 5.418155
+ 54%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                        | 699/1286 [04:24<03:43,  2.62it/s]Epoch 3 / 3  the step 700-- Total loss: 6.780645
+ 62%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                      | 799/1286 [05:02<03:02,  2.67it/s]Epoch 3 / 3  the step 800-- Total loss: 6.073572
+ 70%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                    | 899/1286 [05:40<02:21,  2.73it/s]Epoch 3 / 3  the step 900-- Total loss: 5.377345
+ 78%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                   | 999/1286 [06:18<01:47,  2.66it/s]Epoch 3 / 3  the step 1000-- Total loss: 4.377139
+ 85%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                 | 1099/1286 [06:56<01:10,  2.64it/s]Epoch 3 / 3  the step 1100-- Total loss: 4.635336
+ 93%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋               | 1199/1286 [07:34<00:32,  2.65it/s]Epoch 3 / 3  the step 1200-- Total loss: 4.226482
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1286/1286 [08:07<00:00,  2.64it/s]
+path: bart_snapshot/original/qt/epoch_3_step_1286.pt
+final loss :  [66.82217407226562, 61.97270202636719, 55.78258514404297, 55.29653549194336, 54.50581741333008, 51.7308235168457, 45.597084045410156, 47.19013977050781, 45.00246047973633, 44.31617736816406, 41.49858856201172, 35.70710372924805, 30.674762725830078, 29.30823516845703, 26.978199005126953, 25.195344924926758, 25.869787216186523, 21.586593627929688, 20.71825408935547, 16.26313591003418, 14.732495307922363, 14.862995147705078, 13.597211837768555, 12.70534896850586, 11.06661605834961, 8.658844947814941, 8.222504615783691, 9.002036094665527, 7.452548027038574, 5.418154716491699, 6.78064489364624, 6.073571681976318, 5.377344608306885, 4.377139091491699, 4.635335922241211, 4.226481914520264]
+CUDA_VISIBLE_DEVICES=2 python plbart.py -train -train_data ../data/openstack_data/openstack_train.pkl -save-dir bart_snapshot/original/openstack -dictionary_data ../data/openstack_dict.pkl
+10643 10643
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+10643 10643 10643
+pad_msg_input_ids (10643, 256)
+pad_msg_input_masks (10643, 256)
+pad_code_input_ids (10643, 4, 120)
+pad_code_input_masks (10643, 4, 120)
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.weight', 'classification_head.dense.weight', 'classification_head.dense.bias', 'classification_head.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+ 15%|██████████████████████████████████▏                                                                                                                                                                                                   | 99/666 [00:38<03:30,  2.70it/s]Epoch 1 / 3  the step 100-- Total loss: 66.956276
+ 30%|████████████████████████████████████████████████████████████████████▍                                                                                                                                                                | 199/666 [01:15<02:54,  2.67it/s]Epoch 1 / 3  the step 200-- Total loss: 60.648869
+ 45%|██████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                                                                                              | 299/666 [01:53<02:19,  2.64it/s]Epoch 1 / 3  the step 300-- Total loss: 56.960300
+ 60%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                           | 399/666 [02:31<01:41,  2.64it/s]Epoch 1 / 3  the step 400-- Total loss: 54.055771
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                         | 499/666 [03:09<01:02,  2.65it/s]Epoch 1 / 3  the step 500-- Total loss: 56.346260
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                       | 599/666 [03:47<00:25,  2.64it/s]Epoch 1 / 3  the step 600-- Total loss: 53.139973
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 666/666 [04:12<00:00,  2.64it/s]
+path: bart_snapshot/original/openstack/epoch_1_step_666.pt
+ 15%|██████████████████████████████████▏                                                                                                                                                                                                   | 99/666 [00:37<03:29,  2.71it/s]Epoch 2 / 3  the step 100-- Total loss: 49.557148
+ 30%|████████████████████████████████████████████████████████████████████▍                                                                                                                                                                | 199/666 [01:15<02:56,  2.65it/s]Epoch 2 / 3  the step 200-- Total loss: 45.538845
+ 45%|██████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                                                                                              | 299/666 [01:53<02:18,  2.64it/s]Epoch 2 / 3  the step 300-- Total loss: 43.740612
+ 60%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                           | 399/666 [02:31<01:41,  2.64it/s]Epoch 2 / 3  the step 400-- Total loss: 42.261253
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                         | 499/666 [03:09<01:03,  2.65it/s]Epoch 2 / 3  the step 500-- Total loss: 37.795414
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                       | 599/666 [03:47<00:25,  2.63it/s]Epoch 2 / 3  the step 600-- Total loss: 37.223499
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 666/666 [04:13<00:00,  2.63it/s]
+path: bart_snapshot/original/openstack/epoch_2_step_666.pt
+ 15%|██████████████████████████████████▏                                                                                                                                                                                                   | 99/666 [00:37<03:34,  2.65it/s]Epoch 3 / 3  the step 100-- Total loss: 29.808998
+ 30%|████████████████████████████████████████████████████████████████████▍                                                                                                                                                                | 199/666 [01:15<02:56,  2.65it/s]Epoch 3 / 3  the step 200-- Total loss: 26.594603
+ 45%|██████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                                                                                              | 299/666 [01:53<02:18,  2.66it/s]Epoch 3 / 3  the step 300-- Total loss: 24.484814
+ 60%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                           | 399/666 [02:31<01:41,  2.62it/s]Epoch 3 / 3  the step 400-- Total loss: 21.550634
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                         | 499/666 [03:09<01:02,  2.67it/s]Epoch 3 / 3  the step 500-- Total loss: 20.467649
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                       | 599/666 [03:46<00:25,  2.62it/s]Epoch 3 / 3  the step 600-- Total loss: 17.410753
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 666/666 [04:12<00:00,  2.64it/s]
+path: bart_snapshot/original/openstack/epoch_3_step_666.pt
+final loss :  [66.9562759399414, 60.648868560791016, 56.96030044555664, 54.05577087402344, 56.34626007080078, 53.13997268676758, 49.55714797973633, 45.53884506225586, 43.7406120300293, 42.261253356933594, 37.795413970947266, 37.2234992980957, 29.808998107910156, 26.594602584838867, 24.484813690185547, 21.550634384155273, 20.467649459838867, 17.41075325012207]
+
+
+test bart-base model
+CUDA_VISIBLE_DEVICES=2 python plbart.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model bart_snapshot/original/qt/epoch_1_step_1286.pt -dictionary_data ../data/qt_dict.pkl
+predicting lora-codebert model
+5141 5141
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+5141 5141 5141
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.dense.bias', 'classification_head.dense.weight', 'classification_head.out_proj.bias', 'classification_head.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [01:07<00:00,  4.78it/s]
+Test data at Threshold 0.5 -- AUc: 0.82 Accuracy: 0.82, False Positives: 0.77, Precision: 0.23, Recall: 0.62
+程序运行时间：91.87398 s
+CUDA_VISIBLE_DEVICES=2 python plbart.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model bart_snapshot/original/qt/epoch_3_step_1286.pt -dictionary_data ../data/qt_dict.pkl
+predicting lora-codebert model
+5141 5141
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+5141 5141 5141
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.weight', 'classification_head.dense.bias', 'classification_head.dense.weight', 'classification_head.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [01:06<00:00,  4.84it/s]
+Test data at Threshold 0.5 -- AUc: 0.80 Accuracy: 0.90, False Positives: 0.71, Precision: 0.29, Recall: 0.24
+程序运行时间：93.59060 s
+CUDA_VISIBLE_DEVICES=2 python plbart.py -predict -pred_data ../data/qt_data/qt_test.pkl -load_model bart_snapshot/original/qt/epoch_2_step_1286.pt -dictionary_data ../data/qt_dict.pkl
+predicting lora-codebert model
+5141 5141
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+5141 5141 5141
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.bias', 'classification_head.dense.bias', 'classification_head.out_proj.weight', 'classification_head.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 322/322 [01:06<00:00,  4.82it/s]
+Test data at Threshold 0.5 -- AUc: 0.80 Accuracy: 0.90, False Positives: 0.71, Precision: 0.29, Recall: 0.30
+程序运行时间：92.27885 s
+CUDA_VISIBLE_DEVICES=2 python plbart.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model bart_snapshot/original/openstack/epoch_1_step_666.pt -dictionary_data ../data/openstack_dict.pkl
+predicting lora-codebert model
+2661 2661
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+2661 2661 2661
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.weight', 'classification_head.dense.weight', 'classification_head.out_proj.bias', 'classification_head.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [00:35<00:00,  4.74it/s]
+Test data at Threshold 0.5 -- AUc: 0.81 Accuracy: 0.71, False Positives: 0.73, Precision: 0.27, Recall: 0.77
+程序运行时间：46.33182 s
+CUDA_VISIBLE_DEVICES=2 python plbart.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model bart_snapshot/original/openstack/epoch_3_step_666.pt -dictionary_data ../data/openstack_dict.pkl
+predicting lora-codebert model
+2661 2661
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+2661 2661 2661
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.bias', 'classification_head.dense.weight', 'classification_head.dense.bias', 'classification_head.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [00:35<00:00,  4.74it/s]
+Test data at Threshold 0.5 -- AUc: 0.75 Accuracy: 0.83, False Positives: 0.67, Precision: 0.33, Recall: 0.32
+程序运行时间：47.78499 s
+CUDA_VISIBLE_DEVICES=2 python plbart.py -predict -pred_data ../data/openstack_data/openstack_test.pkl -load_model bart_snapshot/original/openstack/epoch_2_step_666.pt -dictionary_data ../data/openstack_dict.pkl
+predicting lora-codebert model
+2661 2661
+ max length at tokenizer: 256
+ max length for code tokenizer: 120
+2661 2661 2661
+Some weights of BartForSequenceClassification were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['classification_head.out_proj.bias', 'classification_head.dense.bias', 'classification_head.dense.weight', 'classification_head.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████
