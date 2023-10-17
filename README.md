@@ -6,8 +6,8 @@
 
 #### Dataset:
 
-##### RQ1：full-fine-tune 6 models
-##### RQ2：trainer longer
+##### RQ1：full fine-tune 6 models
+##### RQ2：training longer
 ##### RQ3：ablation experiment
 ##### RQ4：data split and few-shot
 
